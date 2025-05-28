@@ -1,4 +1,4 @@
-# server.py
+from utils import validate_nepali_phone_number
 from mcp.server.fastmcp import FastMCP
 
 # Create an MCP server
@@ -18,6 +18,10 @@ def multiply(a: int, b: int) -> int:
     """Multiply two numbers"""
     return a * b
 
+@mcp.tool()
+def validatePhoneNumber(phone_number: str) -> bool:
+    """Validates if the given phone number is a valid nepali phone number"""
+    return validate_nepali_phone_number(phone_number)
 
 # Add a dynamic greeting resource
 @mcp.resource("greeting://{name}")

@@ -23,6 +23,11 @@ def validatePhoneNumber(phone_number: str) -> bool:
     """Validates if the given phone number is a valid nepali phone number"""
     return validate_nepali_phone_number(phone_number)
 
+@mcp.tool()
+def checkBalance(phone_number: str) -> int:
+    """Takes a validated phone number and return the balance of the user"""
+    return 100
+
 # Add a dynamic greeting resource
 @mcp.resource("greeting://{name}")
 def get_greeting(name: str) -> str:

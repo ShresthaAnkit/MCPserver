@@ -36,4 +36,4 @@ def get_greeting(name: str) -> str:
 
 if __name__ == "__main__":
     # Initialize and run the server
-    mcp.run()
+    mcp.run(transport='streamable-http')
